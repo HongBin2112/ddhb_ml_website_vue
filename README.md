@@ -21,6 +21,7 @@ npm run serve
 
 ### 4.使用npm run build打包完成後，在dist資料夾打開index.html為空白?：到index.html內將js、css的路徑改一下，改為相對路徑即可。
 
+### 4.1 github page部分：預設是會把dist資料夾在add時忽略，我是直接git add dist -f。官方文件有提供發佈到github page的方法：請參閱[Vue CLI Deployment](https://cli.vuejs.org/guide/deployment.html#github-pages)
 <br>
 
 ---
