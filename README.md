@@ -18,6 +18,9 @@ npm run serve
 ### 3.雜項
 - ### [Vue中动态绑定img的src属性(v-bind)](https://blog.csdn.net/ji_ban/article/details/108141905)
 
+
+### 4.使用npm run build打包完成後，在dist資料夾打開index.html為空白?：到index.html內將js、css的路徑改一下，改為相對路徑即可。
+
 <br>
 
 ---
