@@ -12,7 +12,7 @@
 
 <script>
   //import HelloWorld from './components/HelloWorld.vue'
-  import Header from './components/Header.vue';
+  import Header from './components/HeaderV2.vue';
   import Footer from './components/Footer.vue';
   import IntroBlock from './components/IntroBlock.vue';
   import MoreArticles from './components/MoreArticles.vue';

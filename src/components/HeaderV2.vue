@@ -13,53 +13,48 @@
 
 
 <template>
-<div id="header" class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-        
-        <div class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+<div class="container" id="header">
+    <nav class="navbar navbar-expand-lg bg-light">
+
+        <div class="container-fluid text-center">
+
             <a v-bind:href="brand.href">
                 <img class="bi me-2" v-bind:src="brand.imgSrc" width="36" height="36">
             </a>
-            
-            <span id="brand-content-font" class="fs-4">{{brand.text}}</span> 
-        </div>
+            <span id="brand-content-font" class="fs-4">{{brand.text}}</span>
+             
 
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-
-
-            <div class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none" id="collapsed-btn">
-                <nav class="navbar navbar-expand-lg bg-light">
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu-list-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
-            </div>
-
-            <div class="collapse" id="menu-list-collapse">
-                <ul id="menu-list" class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
                 
-                    <li><button @click="buttonGoTo('#')">Home</button></li>
-                    <li><button @click="buttonGoTo('#')">Features</button></li>
-                    <li><button @click="buttonGoTo('#')">Pricing</button></li>
-                    <li><button @click="buttonGoTo('#')">FAQs</button></li>
-                    <li><button @click="buttonGoTo('https://www.facebook.com/')">About</button></li>
+                <ul id="menu-list" class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <button @click="buttonGoTo('#')">Home</button> 
+                    </li>
+
+                    <li class="nav-item">
+                        <button @click="buttonGoTo('#')">Features</button> 
+                    </li>
+
+                    <li class="nav-item">
+                        <button @click="buttonGoTo('#')">FAQs</button> 
+                    </li>
                     
                 </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
             </div>
 
-
-
-
-
-        <div class="col-md-3 text-end">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
-
-    </header>
-
+    </nav>
 </div>
 
 </template>
@@ -102,6 +97,10 @@
     #header{
         max-width:100%; 
         min-height: 15%;
+
+        box-sizing: border-box;
+        padding:8px auto;
+        
         background-color:#F5F5F5;
         box-shadow:2px 10px 16px -4px rgba(0,0,0,0.2);
     }
@@ -112,6 +111,10 @@
         font-weight: bold;
         */
         font-size:1.25em;
+    }
+
+    #menu-list{
+        margin:0px 2%;
     }
 
     #menu-list a{
@@ -126,8 +129,8 @@
 
     #menu-list button{
         height: 100%;
-        margin-right: 10px;
-        margin-left:10px;
+        margin: auto 16px;
+
 
         outline:none;
         background-color: transparent;
@@ -150,8 +153,6 @@
         display:block; 
 
         height: 2px;
-        background-color: #000;
-
         transition: .3s;
       }
     
@@ -161,20 +162,11 @@
     }
     
     #menu-list button:hover::after{
+        background-color: #000;
         right:0%;
         left:0%;
     }
 
 
-    @media screen and (min-width: 500px){
-        #collapsed-btn{
-            display:none;
-        }
-    }
-    @media screen and (max-width: 500px){
-        #collapsed-btn{
-            display:block;
-        }
-    }
   
 </style>
