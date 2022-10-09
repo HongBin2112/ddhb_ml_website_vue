@@ -27,16 +27,25 @@
     <h1>{{title}}</h1>
 
     <div class="articles">
-        <div v-for="(article, index) in articles" 
-          :key="index"
-          class="article-intro">
 
-            <h3>{{article.title}}</h3>
-            <a :href="article.articleUrl">
-                <img :src="article.imgSrc">
-            </a>
+        <transition-group
+        appear
+        name="animate__animated animate__bounce"
+        enter-active-class="animate__fadeIn">
 
-        </div>
+            <div v-for="(article, index) in articles" 
+            :key="index"
+            class="article-intro">
+
+                <h3>{{article.title}}</h3>
+                <a :href="article.articleUrl">
+                    <img :src="article.imgSrc">
+                </a>
+
+            </div>
+
+        </transition-group>
+
     </div>
 </div>
 </template>
@@ -44,6 +53,8 @@
 
 
 <script>
+    import 'animate.css';
+    
     export default {
         name:"MoreArticles",
 

@@ -5,7 +5,7 @@
     <transition
         appear
         name="animate__animated animate__bounce"
-        enter-active-class="animate__fadeInRight"
+        enter-active-class="animate__slideInRight"
     >
         <button @click="buttonGoTo()" @mouseover="emitButtonID()">{{buttonID}}</button>
     </transition>
