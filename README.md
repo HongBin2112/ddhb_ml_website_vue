@@ -32,16 +32,20 @@ npm run serve
 ## - 主要檔案位置 :  
 <br>
 
-## ./public   
-### - /favicon.ico  
-### - /index.html
-<br>
+<pre>
+/
+├── public/
+│   ├── favicon.ico
+│   └── index.html
+│
+├── src/
+│   ├── assets/ 
+│   ├── components/
+│   ├── App.vue
+│   └── main.js 
+...
+</pre>
 
-## ./src  
-### - /assets/  
-### - /components/   
-### - /App.vue  
-### - /main.js  
 
 
 <br>
